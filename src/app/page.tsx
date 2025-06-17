@@ -16,34 +16,7 @@ import { ContactForm } from "@/components/sections/contactForm";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col font-sans bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 scroll-smooth">
-      {/* ==== Header =================================================== */}
-      <header className="px-6 sm:px-10 py-6  pb-10 grid-cols-3 items-center gap-4 w-full max-w-7xl mx-auto text-center">
-        {/* Inicio, servicios, portfolio -- LOGO -- pricing contacto*/}
-        <nav className="hidden md:flex items-center justify-center gap-20 text-sm font-medium">
-          {/* Grupo izquierdo */}
-          <div className="flex gap-20">
-            <Link href="#servicios">Servicios</Link>
-            <Link href="#portfolio">Portfolio</Link>
-          </div>
-
-          {/* Logo */}
-          <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight">
-            Hero{" "}
-            <span style={{ color: "#E6492D" }}>
-              {" "}
-              <br />
-              Webs
-            </span>
-          </h1>
-
-          {/* Grupo derecho */}
-          <div className="flex gap-20">
-            <Link href="#pricing">Pricing</Link>
-            <Link href="#contacto">Contacto</Link>
-          </div>
-        </nav>
-      </header>
-
+      
       {/* ==== Hero ====================================================== */}
       <main className="flex-grow flex flex-col items-center text-center gap-12 px-8 pb-20">
         <section className="flex flex-col md:flex-row items-center gap-8 max-w-6xl w-full bg-red">
