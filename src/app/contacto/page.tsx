@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
-import { Mail, Phone, Building, User } from "lucide-react";
+import { Mail, Phone, Building, User, BusIcon, User2, Building2 } from "lucide-react";
 import Link from "next/link";
 
 /**
@@ -54,14 +54,12 @@ export default function ContactPage() {
 
           <div className="space-y-4 text-sm">
             <p className="flex items-center gap-3">
-              <Phone size={18} className="text-orange-500" /> +34 600 123 456
+              <Phone size={18} className="text-orange-500" /> +34 622 040 285
             </p>
             <p className="flex items-center gap-3">
               <Mail size={18} className="text-orange-500" /> hola@herowebs.com
             </p>
-            <p className="flex items-center gap-3">
-              <Building size={18} className="text-orange-500" /> Madrid, España
-            </p>
+            
           </div>
         </motion.div>
 
@@ -100,7 +98,7 @@ export default function ContactPage() {
             >
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="relative">
-                  <User size={16} className="absolute left-3 top-3 text-orange-500" />
+                  <User size={16} className="absolute left-3 top-4 text-orange-500" />
                   <input 
                     type="text"
                     name="name"
@@ -109,34 +107,40 @@ export default function ContactPage() {
                     className="w-full pl-10 pr-4 py-3 rounded-xl border border-neutral-700 dark:border-neutral-300 placeholder-neutral-300 bg-transparent focus:ring-2 focus:ring-orange-500 outline-none"
                   />
                 </div>
-                <input
-                  type="text"
-                  name="surnames"
-                  placeholder="Apellidos"
-                  required
-                  className="w-full px-4 py-3 rounded-xl border placeholder-neutral-300  border-neutral-700 dark:border-neutral-300 bg-transparent focus:ring-2 focus:ring-orange-500 outline-none"
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Teléfono"
-                  required
-                  className="w-full px-4 py-3  placeholder-neutral-300  rounded-xl border border-neutral-700 dark:border-neutral-300 bg-transparent focus:ring-2 focus:ring-orange-500 outline-none"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  required
-                  className="w-full px-4 py-3 placeholder-neutral-300  rounded-xl border border-neutral-700 dark:border-neutral-300 bg-transparent focus:ring-2 focus:ring-orange-500 outline-none"
-                />
-                <input
-                  type="text"
-                  name="company"
-                  placeholder="Empresa"
-                  required
-                  className="w-full md:col-span-2 placeholder-neutral-300  px-4 py-3 rounded-xl border border-neutral-700 dark:border-neutral-300 bg-transparent focus:ring-2 focus:ring-orange-500 outline-none"
-                />
+            
+                <div className="relative">
+                  <Phone size={16} className="absolute left-3 top-4 text-orange-500" />
+                  <input 
+                    type="phone"
+                    name="phone"
+                    placeholder="teléfono"
+                    required
+                    className="w-full pl-10 pr-4 py-3 rounded-xl border border-neutral-700 dark:border-neutral-300 placeholder-neutral-300 bg-transparent focus:ring-2 focus:ring-orange-500 outline-none"
+                  />
+                </div>
+                <div className="relative">
+                  <Mail size={16} className="absolute left-3 top-4 text-orange-500" />
+                  <input 
+                    type="email"
+                    name="email"
+                    placeholder="Correo"
+                    required
+                    className="w-full pl-10 pr-4 py-3 rounded-xl border border-neutral-700 dark:border-neutral-300 placeholder-neutral-300 bg-transparent focus:ring-2 focus:ring-orange-500 outline-none"
+                  />
+                </div>
+                <div className="relative">
+                  <Building2 size={16} className="absolute left-3 top-4 text-orange-500" />
+                  <input 
+                    type="text"
+                    name="Business"
+                    placeholder="Empresa"
+                    required
+                    className="w-full pl-10 pr-4 py-3 rounded-xl border border-neutral-700 dark:border-neutral-300 placeholder-neutral-300 bg-transparent focus:ring-2 focus:ring-orange-500 outline-none"
+                  />
+                </div>
+                
+                    
+                
               </div>
 
               <button
