@@ -25,13 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body
-        className="bg-neutral-950 text-white antialiased"
-      >
-        <Navbar> 
+      <body className="bg-neutral-950 text-white antialiased">
+        <Navbar></Navbar>
 
-        </Navbar>
-        
         <main>{children}</main>
       </body>
     </html>

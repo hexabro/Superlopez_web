@@ -3,7 +3,15 @@
 import { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
-import { Mail, Phone, Building, User, BusIcon, User2, Building2 } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  Building,
+  User,
+  BusIcon,
+  User2,
+  Building2,
+} from "lucide-react";
 import Link from "next/link";
 
 /**
@@ -22,10 +30,10 @@ export default function ContactPage() {
 
     emailjs
       .sendForm(
-        "service_r3953dg", 
-        "template_gw1uqhq", 
+        "service_r3953dg",
+        "template_gw1uqhq",
         formRef.current,
-        "nEH_ljSpW8z2TW2aI" 
+        "nEH_ljSpW8z2TW2aI",
       )
       .then(() => setSubmitted(true))
       .catch((err) => {
@@ -59,7 +67,6 @@ export default function ContactPage() {
             <p className="flex items-center gap-3">
               <Mail size={18} className="text-orange-500" /> hola@herowebs.com
             </p>
-            
           </div>
         </motion.div>
 
@@ -98,8 +105,11 @@ export default function ContactPage() {
             >
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="relative">
-                  <User size={16} className="absolute left-3 top-4 text-orange-500" />
-                  <input 
+                  <User
+                    size={16}
+                    className="absolute left-3 top-4 text-orange-500"
+                  />
+                  <input
                     type="text"
                     name="name"
                     placeholder="Nombre"
@@ -107,10 +117,13 @@ export default function ContactPage() {
                     className="w-full pl-10 pr-4 py-3 rounded-xl border border-neutral-700 dark:border-neutral-300 placeholder-neutral-300 bg-transparent focus:ring-2 focus:ring-orange-500 outline-none"
                   />
                 </div>
-            
+
                 <div className="relative">
-                  <Phone size={16} className="absolute left-3 top-4 text-orange-500" />
-                  <input 
+                  <Phone
+                    size={16}
+                    className="absolute left-3 top-4 text-orange-500"
+                  />
+                  <input
                     type="phone"
                     name="phone"
                     placeholder="teléfono"
@@ -119,8 +132,11 @@ export default function ContactPage() {
                   />
                 </div>
                 <div className="relative">
-                  <Mail size={16} className="absolute left-3 top-4 text-orange-500" />
-                  <input 
+                  <Mail
+                    size={16}
+                    className="absolute left-3 top-4 text-orange-500"
+                  />
+                  <input
                     type="email"
                     name="email"
                     placeholder="Correo"
@@ -129,8 +145,11 @@ export default function ContactPage() {
                   />
                 </div>
                 <div className="relative">
-                  <Building2 size={16} className="absolute left-3 top-4 text-orange-500" />
-                  <input 
+                  <Building2
+                    size={16}
+                    className="absolute left-3 top-4 text-orange-500"
+                  />
+                  <input
                     type="text"
                     name="Business"
                     placeholder="Empresa"
@@ -138,9 +157,6 @@ export default function ContactPage() {
                     className="w-full pl-10 pr-4 py-3 rounded-xl border border-neutral-700 dark:border-neutral-300 placeholder-neutral-300 bg-transparent focus:ring-2 focus:ring-orange-500 outline-none"
                   />
                 </div>
-                
-                    
-                
               </div>
 
               <button

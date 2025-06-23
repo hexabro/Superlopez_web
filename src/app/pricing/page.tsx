@@ -29,7 +29,8 @@ const plans: Plan[] = [
     id: "sidekick",
     name: "Sidekick",
     price: "125€ / mes",
-    description: "Ideal para pequeñas empresas que dan sus primeros pasos online.",
+    description:
+      "Ideal para pequeñas empresas que dan sus primeros pasos online.",
     features: [
       "Diseño web básico (hasta 5 páginas)",
       "Hosting & soporte estándar",
@@ -100,45 +101,56 @@ const PricingPage: React.FC = () => {
 
         {/* Grid de planes */}
         <div className="mt-14 grid gap-8 md:grid-cols-3">
-          {plans.map(({ id, name, price, description, features, highlight }) => (
-            <motion.div
-              key={id}
-              whileHover={{ y: -8, scale: 1.03 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <div
-                className={`flex h-full flex-col rounded-2xl border ${
-                  highlight ? "border-orange-500 ring-2 ring-orange-500" : "border-neutral-800 dark:border-neutral-300"
-                } bg-neutral-900 dark:bg-neutral-100 p-8 shadow-lg`}
+          {plans.map(
+            ({ id, name, price, description, features, highlight }) => (
+              <motion.div
+                key={id}
+                whileHover={{ y: -8, scale: 1.03 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
-                <h2 className="text-2xl font-bold text-center mb-2">{name}</h2>
-                <p className="text-center text-4xl font-extrabold mb-4 bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent">
-                  {price}
-                </p>
-                <p className="text-center text-sm mb-6 text-neutral-400 dark:text-neutral-600">
-                  {description}
-                </p>
-                <ul className="flex-grow space-y-3 text-sm">
-                  {features.map((f) => (
-                    <li key={f} className="flex items-start gap-2">
-                      <span className="mt-[6px] h-2 w-2 rounded-full bg-orange-500"></span>
-                      <span>{f}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link href={`/checkout?plan=${id}`} className="mt-8 inline-block">
-                  <button className="w-full rounded-lg bg-gradient-to-r from-red-600 to-orange-500 py-3 font-semibold text-white transition hover:to-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">
-                    Contratar
-                  </button>
-                </Link>
-              </div>
-            </motion.div>
-          ))}
+                <div
+                  className={`flex h-full flex-col rounded-2xl border ${
+                    highlight
+                      ? "border-orange-500 ring-2 ring-orange-500"
+                      : "border-neutral-800 dark:border-neutral-300"
+                  } bg-neutral-900 dark:bg-neutral-100 p-8 shadow-lg`}
+                >
+                  <h2 className="text-2xl font-bold text-center mb-2">
+                    {name}
+                  </h2>
+                  <p className="text-center text-4xl font-extrabold mb-4 bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent">
+                    {price}
+                  </p>
+                  <p className="text-center text-sm mb-6 text-neutral-400 dark:text-neutral-600">
+                    {description}
+                  </p>
+                  <ul className="flex-grow space-y-3 text-sm">
+                    {features.map((f) => (
+                      <li key={f} className="flex items-start gap-2">
+                        <span className="mt-[6px] h-2 w-2 rounded-full bg-orange-500"></span>
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href={`/checkout?plan=${id}`}
+                    className="mt-8 inline-block"
+                  >
+                    <button className="w-full rounded-lg bg-gradient-to-r from-red-600 to-orange-500 py-3 font-semibold text-white transition hover:to-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">
+                      Contratar
+                    </button>
+                  </Link>
+                </div>
+              </motion.div>
+            ),
+          )}
         </div>
 
         {/* Tabla de precios individuales */}
         <div className="mt-24">
-          <h2 className="text-3xl font-bold text-center mb-8">Servicios a la carta</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Servicios a la carta
+          </h2>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[600px] border-collapse rounded-lg overflow-hidden text-sm">
               <thead>
@@ -158,7 +170,9 @@ const PricingPage: React.FC = () => {
                         : "bg-neutral-900/70 dark:bg-neutral-100"
                     }
                   >
-                    <td className="px-4 py-3 whitespace-nowrap font-medium">{service}</td>
+                    <td className="px-4 py-3 whitespace-nowrap font-medium">
+                      {service}
+                    </td>
                     <td className="px-4 py-3 whitespace-nowrap">{price}</td>
                     <td className="px-4 py-3">{desc}</td>
                   </tr>
