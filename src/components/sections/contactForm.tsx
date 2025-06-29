@@ -81,6 +81,7 @@ export function ContactForm() {
                   <input
                     type="text"
                     name="name"
+                    autoComplete="name"
                     placeholder="Nombre"
                     required
                     className="w-full pl-10 pr-4 py-3 rounded-xl text-neutral-800 dark:text-neutral-200 border border-neutral-700 dark:border-neutral-400 placeholder-neutral-400 bg-transparent focus:ring-2 focus:ring-orange-500 outline-none"
@@ -95,6 +96,7 @@ export function ContactForm() {
                   <input
                     type="phone"
                     name="phone"
+                    autoComplete= "tel"
                     placeholder="teléfono"
                     required
                     className="w-full pl-10 pr-4 py-3 text-neutral-800 dark:text-neutral-200 rounded-xl border border-neutral-700 dark:border-neutral-400 placeholder-neutral-400 bg-transparent focus:ring-2 focus:ring-orange-500 outline-none"
@@ -109,6 +111,7 @@ export function ContactForm() {
                   <input
                     type="email"
                     name="email"
+                    autoComplete="email"
                     placeholder="Correo"
                     required
                    className="w-full pl-10 pr-4 py-3 text-neutral-800 dark:text-neutral-200 rounded-xl border border-neutral-700 dark:border-neutral-400 placeholder-neutral-400 bg-transparent focus:ring-2 focus:ring-orange-500 outline-none"
@@ -123,6 +126,7 @@ export function ContactForm() {
                   <input
                     type="text"
                     name= "company"
+                    autoComplete="organization"
                     placeholder="Empresa"
                     required
                     className="w-full pl-10 pr-4 py-3 text-neutral-800 dark:text-neutral-200 rounded-xl border border-neutral-700 dark:border-neutral-400 placeholder-neutral-400 bg-transparent focus:ring-2 focus:ring-orange-500 outline-none"
@@ -137,6 +141,7 @@ export function ContactForm() {
                   <textarea
                     name="description"
                     placeholder="Cuéntanos lo que necesitas"
+                    autoComplete="off"
                     required
                     rows = {4}
                     className="w-full pl-10 pr-4 py-3  text-neutral-800 dark:text-neutral-200 rounded-xl border border-neutral-700 dark:border-neutral-400 placeholder-neutral-400 bg-transparent focus:ring-2 focus:ring-orange-500 outline-none min-h-[6rem] resize-none md:col-span-2"

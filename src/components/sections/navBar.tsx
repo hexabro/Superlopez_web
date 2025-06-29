@@ -11,9 +11,9 @@ import { Menu, X, Shield } from "lucide-react";
  */
 const links = [
   { href: "/", label: "Inicio" },
-  { href: "/servicios", label: "Servicios" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/contacto", label: "Contacto" },
+  { href: "#servicios", label: "Servicios" },
+  { href: "#pricing", label: "Pricing" },
+  { href: "#contacto", label: "Contacto" },
 ];
 
 export default function Navbar() {
@@ -44,6 +44,17 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [open]);
 
+  /* HELPER PARA SMOOTH SCROLL */
+  const goSmooth = (hash: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!hash.startsWith("#")) return;          // enlaces externos = comportamiento normal
+    e.preventDefault();
+    setOpen(false);
+    const el = document.querySelector(hash);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    // actualiza la url sin saltar
+    history.pushState(null, "", hash);
+  };
+
   /**
    * Utilidad para colorear el enlace activo.
    */
@@ -69,7 +80,7 @@ export default function Navbar() {
         {/* Menú desktop */}
         <nav className="hidden md:flex gap-6 text-sm font-medium">
           {links.map(({ href, label }) => (
-            <Link key={href} href={href} className={itemClasses(href)}>
+            <Link key={href} href={href} className={itemClasses(href)} scroll = {false} onClick={goSmooth(href)} >
               {label}
             </Link>
           ))}
@@ -93,7 +104,8 @@ export default function Navbar() {
               key={href}
               href={href}
               className={itemClasses(href)}
-              onClick={() => setOpen(false)} // Cerrar al navegar
+              scroll = {false}
+              onClick={goSmooth(href)} 
             >
               {label}
             </Link>
