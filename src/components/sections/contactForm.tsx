@@ -22,7 +22,7 @@ export function ContactForm() {
 
 
 
-    emailjs
+    
 
       emailjs.sendForm("service_r3953dg","template_gw1uqhq", formRef.current!, "nEH_ljSpW8z2TW2aI")
 
