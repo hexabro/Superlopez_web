@@ -43,7 +43,7 @@ const plans: Plan[] = [
       {feature: "Sistema de reservas online", included: true},
       {feature: "Rescate de llamadas (50/mes)", included: false},
       {feature: "Reseñas inteligentes", included: false},
-      {feature: "radar de competencia", included: false},
+      {feature: "Radar de competencia", included: false},
     ],
   },
   {
@@ -57,7 +57,7 @@ const plans: Plan[] = [
       {feature: "Sistema de reservas online", included: true},
       {feature: "Rescate de llamadas (50/mes)", included: true},
       {feature: "Reseñas inteligentes", included: true},
-      {feature: "radar de competencia", included: false},
+      {feature: "Radar de competencia", included: false},
     ],
     highlight: true,
   },
@@ -72,7 +72,7 @@ const plans: Plan[] = [
       {feature: "Sistema de reservas online", included: true},
       {feature: "Rescate de llamadas (50/mes)", included: true},
       {feature: "Reseñas inteligentes", included: true},
-      {feature: "radar de competencia", included: true},
+      {feature: "Radar de competencia", included: true},
     ],
   },
 ];

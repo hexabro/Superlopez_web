@@ -34,7 +34,7 @@ const services: Service[] = [
     id: "reviews",
     title: "Reseñas Inteligentes",
     description:
-      "Pide feedback privado. Las opiniones positivas van directo a Google Reviews; las negativas te llegan a ti para mejorar.",
+      "Pide feedback privado. Las opiniones positivas van directamente a Google Reviews; las negativas te llegan a ti para mejorar.",
     icon: Star,
     cta: { label: "Mejorar reputación", href: "/contact?service=reviews" },
   },
